@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>إنشاء حساب</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <h1>إنشاء حساب</h1>
+  <% if (error) { %><p class="error"><%= error %></p><% } %>
+  <form method="POST" action="/signup">
+    <input name="username" placeholder="اسم المستخدم" required /><br>
+    <input type="password" name="password" placeholder="كلمة السر" required /><br>
+    <input type="password" name="confirm"  placeholder="تأكيد كلمة السر" required /><br>
+    <button type="submit">تسجيل</button>
+  </form>
+  <p><a href="/login">لديك حساب؟ تسجيل الدخول</a></p>
+</body>
+</html>
